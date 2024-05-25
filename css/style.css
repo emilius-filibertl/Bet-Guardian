@@ -1,0 +1,324 @@
+body {
+  font-family: "Montserrat", sans-serif !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000 !important;
+  color: #e5e5e5 !important;
+}
+
+h1,
+h3,
+h5 {
+  margin: 0 !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #fca311;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Title*/
+/* Aligning title into center */
+.title-container {
+  text-align: center;
+  color: #fca311;
+}
+
+/* Betting System */
+.betting-container {
+  width: 100%;
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.betting-container .title-container h5 {
+  margin-bottom: 10px !important;
+}
+
+.betting-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-outline-warning {
+  --bs-btn-color: #fca311 !important;
+  --bs-btn-border-color: #fca311 !important;
+  --bs-btn-hover-color: #000000 !important;
+  --bs-btn-hover-bg: #fca311 !important;
+  --bs-btn-hover-border-color: #fca311 !important;
+  --bs-btn-focus-shadow-rgb: 255, 193, 7 !important;
+  --bs-btn-active-color: #000000 !important;
+  --bs-btn-active-bg: #fca311 !important;
+  --bs-btn-active-border-color: #fca311 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: #fca311 !important;
+  --bs-btn-disabled-bg: transparent !important;
+  --bs-btn-disabled-border-color: #fca311 !important;
+  --bs-gradient: none !important;
+}
+
+.btn-disabled {
+  background-color: #fca311 !important;
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Sequence & Bet */
+.sequenceBet-container {
+  width: 100%;
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Record Data */
+.data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.data-container > .title-container {
+  width: 100%;
+  border-bottom: 1px solid #fca311;
+}
+
+.data-container .title-container h5 {
+  padding: 10px 0;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #fca311;
+}
+
+.data-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-btn {
+  border-bottom: 0;
+}
+
+.btn-warning {
+  --bs-btn-color: #000000 !important;
+  --bs-btn-bg: #fca311 !important;
+  --bs-btn-border-color: #fca311 !important;
+  --bs-btn-hover-color: #000000 !important;
+  --bs-btn-hover-bg: #d78d0f !important;
+  --bs-btn-hover-border-color: #fca311 !important;
+  --bs-btn-focus-shadow-rgb: 217, 164, 6 !important;
+  --bs-btn-active-color: #000000 !important;
+  --bs-btn-active-bg: #fca311 !important;
+  --bs-btn-active-border-color: #fca311 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: #000000 !important;
+  --bs-btn-disabled-bg: #fca311 !important;
+  --bs-btn-disabled-border-color: #fca311 !important;
+}
+
+/* Game Overview */
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.overview-container > .title-container {
+  width: 100%;
+  border-bottom: 1px solid #fca311;
+}
+
+.overview-container .title-container h5 {
+  padding: 10px 0;
+}
+
+.overview-content {
+  width: 100%;
+  display: flex;
+}
+
+.overview-content-left,
+.overview-content-right {
+  min-width: 200px;
+  padding: 5px 0;
+  padding-left: 10px;
+}
+
+.overview-content-left {
+  border-right: 1px solid #fca311;
+}
+
+/* Input Data Form */
+/* Modal */
+.modal-content {
+  background-color: #000000 !important;
+  border-color: #fca311 !important;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+form .form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row label {
+  width: 30%;
+}
+
+.form-row input {
+  color: #e5e5e5;
+  background-color: #000000;
+  padding-left: 5px;
+  border: 0;
+  border-bottom: 1px solid #fca311;
+  outline: none;
+}
+
+.form-row input:focus {
+  border: 1px solid #fca311;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Copy Data */
+.inputCopy {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+@media screen and (max-width: 430px) {
+  .main-container {
+    width: 80%;
+  }
+
+  /* Betting System */
+  .betting-button {
+    flex-wrap: wrap;
+  }
+
+  .betting-button button:disabled {
+    display: none;
+  }
+
+  /* Record Data */
+  .data-row-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .row-one-column-two {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .row-one-column-two label {
+    width: 50%;
+  }
+
+  .row-one-column-one,
+  .row-one-column-three {
+    grid-row: 2;
+  }
+
+  .row-one-column-one {
+    grid-column: 1;
+  }
+
+  .row-one-column-three {
+    grid-column: 2;
+  }
+
+  .data-row-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .row-three-column-two {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .row-three-column-two label {
+    width: 50%;
+  }
+
+  .row-three-column-one,
+  .row-three-column-three {
+    grid-row: 2;
+  }
+
+  .row-three-column-one {
+    grid-column: 1;
+  }
+
+  .row-three-column-three {
+    grid-column: 2;
+  }
+
+  /* Game Overview */
+  .overview-content {
+    flex-direction: column;
+  }
+
+  .overview-content-left,
+  .overview-content-right {
+    padding: 10px;
+  }
+
+  .overview-content-left {
+    border: 0;
+    border-bottom: 1px solid #fca311;
+  }
+}
