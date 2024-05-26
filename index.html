@@ -129,8 +129,8 @@
           </div>
         </div>
 
-        <div class="data-row">
-          <div class="data-column">
+        <div class="data-row data-row-two">
+          <div class="data-column row-two-column-three">
             <input
               type="radio"
               class="btn-check"
@@ -143,7 +143,17 @@
               Win</label
             >
           </div>
-          <div class="data-column">
+          <div class="data-column row-two-column-two">
+            <input
+              type="checkbox"
+              class="btn-check"
+              name="halfPayout"
+              id="halfPayout"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-warning" for="halfPayout">½</label>
+          </div>
+          <div class="data-column row-two-column-one">
             <input
               type="radio"
               class="btn-check"
@@ -216,13 +226,13 @@
           <div class="overview-content-left">
             <div>Highest: <span id="highestText">...</span></div>
             <div>Lowest: <span id="lowestText">...</span></div>
-            <div>Profit: <span id="profitText">...</span></div>
-            <div>Loss: <span id="lossText">...</span></div>
+            <div>P&L: <span id="pnlText">...</span></div>
+            <div>Balance: <span id="balanceText">...</span></div>
           </div>
 
           <div class="overview-content-right">
             <div>Bomb 💣: <span id="bombText">...</span></div>
-            <div>Initial Balance: <span id="balanceText">...</span></div>
+            <div>Initial Balance: <span id="initBalanceText">...</span></div>
             <div>Goals: <span id="goalText">...</span></div>
             <div>
               Remaining:

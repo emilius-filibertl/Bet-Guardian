@@ -279,6 +279,34 @@ form .form-row:last-child {
     grid-column: 2;
   }
 
+  .data-row-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .row-two-column-two {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .row-two-column-two label {
+    width: 50%;
+  }
+
+  .row-two-column-one,
+  .row-two-column-three {
+    grid-row: 2;
+  }
+
+  .row-two-column-one {
+    grid-column: 2;
+  }
+
+  .row-two -column-three {
+    grid-column: 1;
+  }
+
   .data-row-three {
     display: grid;
     grid-template-columns: 1fr 1fr;

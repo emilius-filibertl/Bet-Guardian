@@ -29,6 +29,7 @@ const recordData = function () {
     const playerWin = document.getElementById("playerWin").checked ? 1 : 0;
     const bankerWin = document.getElementById("bankerWin").checked ? 1 : 0;
     const tie = document.getElementById("tie").checked ? 1 : 0;
+    const halfPayout = document.getElementById("halfPayout").checked ? 1 : 0;
     const playerNaturalWin = document.getElementById("playerNaturalWin").checked
       ? 1
       : 0;
@@ -52,6 +53,7 @@ const recordData = function () {
       playerWin,
       bankerWin,
       tie,
+      halfPayout,
       playerNaturalWin,
       bankerNaturalWin,
       thirdCardDraw,
@@ -96,7 +98,12 @@ const recordData = function () {
       if (bankerWin) {
         // Banker Win
         // Update Balance
-        fibonacciBalance += fibonacciBet;
+        // Check if banker wins with 6
+        if (halfPayout) {
+          fibonacciBalance += fibonacciBet / 2;
+        } else {
+          fibonacciBalance += fibonacciBet;
+        }
         // Update Bet
         fibonacciIndex = Math.max(0, fibonacciIndex - 2);
         fibonacciBet = initialBet * fibonacciSequence[fibonacciIndex];
@@ -130,6 +137,7 @@ const recordData = function () {
 
       bombCounter += 1;
       fibonacciIndex = 0;
+      fibonacciBet = initialBet * fibonacciSequence[fibonacciIndex];
       betIndex = 0;
       compensationCount = 0;
     } else {
@@ -150,13 +158,8 @@ const recordData = function () {
     document.getElementById("highestText").textContent = `${highestBalance}`;
     document.getElementById("lowestText").textContent = `${lowestBalance}`;
     let pnl = fibonacciBalance - initialBalance;
-    if (pnl >= 0) {
-      document.getElementById("profitText").textContent = pnl;
-      document.getElementById("lossText").textContent = 0;
-    } else {
-      document.getElementById("profitText").textContent = 0;
-      document.getElementById("lossText").textContent = pnl;
-    }
+    document.getElementById("pnlText").textContent = `${pnl}`;
+    document.getElementById("balanceText").textContent = `${fibonacciBalance}`;
     // Right Container
     document.getElementById("bombText").textContent = `${bombCounter}`;
     document.getElementById("remainingText").textContent = `${
@@ -229,11 +232,13 @@ const inputData = function () {
     // Left Container
     document.getElementById("highestText").textContent = `${initialBalance}`;
     document.getElementById("lowestText").textContent = `${initialBalance}`;
-    document.getElementById("profitText").textContent = `0`;
-    document.getElementById("lossText").textContent = `0`;
+    document.getElementById("pnlText").textContent = `0`;
+    document.getElementById("balanceText").textContent = `${initialBalance}`;
     // Right Container
     document.getElementById("bombText").textContent = `${bombCounter}`;
-    document.getElementById("balanceText").textContent = `${initialBalance}`;
+    document.getElementById(
+      "initBalanceText"
+    ).textContent = `${initialBalance}`;
     document.getElementById("goalText").textContent = `${goal}`;
     document.getElementById("remainingText").textContent = `${
       goal - initialBalance
